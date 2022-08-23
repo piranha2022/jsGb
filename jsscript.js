@@ -18,6 +18,7 @@ alert(admin);
 console.log(admin);
 
 // Задание № 3
+
 let a = 1000 + "108";
 alert('1000 + "108" = ' + a)
 // в консоль
