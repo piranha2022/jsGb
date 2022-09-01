@@ -41,7 +41,7 @@ let basket = [
 let basketPrice = 0;
 for (let prod of basket) {
     basketPrice += prod.price;
-    console.log("Товар " + prod.product + " стоит: " + prod.price);
+    console.log("Товар " + prod.product + " стоит: " + prod.price + " руб.");
 }
 
 
