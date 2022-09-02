@@ -2,11 +2,21 @@
 
 console.log('=========== Задание № 1 ===========');
 
-let a = 0;
-let b = 100;
-while (a <= b) {
-    console.log(a++);
+let number = 2;
+
+while (number <= 100) {
+    let check = true;
+    for (let i = 2; i < number; i++) {
+        if (number % i === 0) {
+            check = false;
+            break;
+        }
+    }
+    if (check) console.log(number);
+    number++;
 }
+
+
 
 
 // 2. С этого урока начинаем работать с функционалом интернет-магазина. Предположим, есть сущность корзины. Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров. Товары в корзине хранятся в массиве. Задачи:
@@ -15,27 +25,27 @@ while (a <= b) {
 
 console.log('=========== Задание № 2 ===========');
 
-function getNumber(min, max) {
-    let number = parseInt(Math.random() * (max - min) + min);
-    if (number === -0) number = 0;
-    return number;
-}
+// function getNumber(min, max) {
+//     let number = parseInt(Math.random() * (max - min) + min);
+//     if (number === -0) number = 0;
+//     return number;
+// }
 let basket = [
     {
         product: "галстук",
-        price: getNumber(50, 100)
+        price: 50
     },
     {
         product: "рубашка",
-        price: getNumber(50, 100)
+        price: 100
     },
     {
         product: "ботинки",
-        price: getNumber(50, 100)
+        price: 150
     },
     {
         product: "брюки",
-        price: getNumber(50, 100)
+        price: 200
     }
 ];
 let basketPrice = 0;
